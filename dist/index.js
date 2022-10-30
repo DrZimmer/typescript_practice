@@ -1,6 +1,7 @@
 "use strict";
 let age = 20;
-function ages() {
-    let age = "hi";
-    return age;
+if (age < 50) {
+    age += 10;
 }
+console.log(age);
+//# sourceMappingURL=index.js.map
