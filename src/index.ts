@@ -16,6 +16,7 @@ let employee: Employee = {
   },
 };
 
+//union types
 function kgToLbs(weight: number | string): number {
   //narrowing
   if (typeof weight === "number") return weight * 2.2;
@@ -24,3 +25,23 @@ function kgToLbs(weight: number | string): number {
 
 kgToLbs(10);
 kgToLbs("10kg");
+
+//intersection
+type Draggable = {
+  drag: () => void;
+};
+
+type Resizable = {
+  resize: () => void;
+};
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+  drag: () => {},
+  resize: () => {},
+};
+
+//literal (exact, specific)
+type Quantity = 50 | 100
+let quantity: Quantity = 100
