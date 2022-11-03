@@ -2,14 +2,16 @@
 //   if (income < 50_000) return income * 1.2;
 //   return income * 1.3;
 // }
-let employee: {
+type Employee = {
   readonly id: number;
   name: string;
   retire: (date: Date) => void;
-} = {
+};
+
+let employee: Employee = {
   id: 1,
   name: "",
   retire: (date: Date) => {
     console.log(date);
-  }
+  },
 };
