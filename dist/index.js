@@ -1,7 +1,17 @@
 "use strict";
-let age = 20;
-if (age < 50) {
-    age += 10;
+let employee = {
+    id: 1,
+    name: "",
+    retire: (date) => {
+        console.log(date);
+    },
+};
+function kgToLbs(weight) {
+    if (typeof weight === "number")
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2;
 }
-console.log(age);
+kgToLbs(10);
+kgToLbs("10kg");
 //# sourceMappingURL=index.js.map
